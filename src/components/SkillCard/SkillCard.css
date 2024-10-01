@@ -1,0 +1,17 @@
+.skill-card{
+    border: #000 3px solid;
+    width: 272px;
+    height: 306px;
+}
+
+.skill-card > h1 {
+    max-width: 200px;
+    font-size: 24px;
+    padding-left: 35px;
+}
+
+.skill-card > p {
+    max-width: 200px;
+    padding-left: 35px;
+    font-size: 16px;
+}

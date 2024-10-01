@@ -1,22 +1,97 @@
-.main-homepage{
+/*  ============
+    Primeira DIV
+    ============
+*/
+
+.first-div{
 
     width: 90vw;
-    height: auto;
+    height: 756px;
     border: 1px solid #000;
     padding: 0 50px;
     margin: 0px auto;
     display: flex;  
 }
 
-.left-homepage{
+.left-first-div{
     flex: 1;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
 
-.right-homepage{
+.div-section{
+    display: flex;
+    gap: 20px;
+}
+
+.left-first-div > h1{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 105%;
+}
+
+.left-first-div > p{
+    font-size: 20px;
+    max-width: 370px;
+}
+
+.right-first-div{
     flex: 1;
 }
 
 .img1{
-    width: 806px;
+    width: 850px;
     height: 520px;
+    padding-top: 10px;
 }
+a{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 105%;
+}
+
+/*
+    ===========
+    SEGUNDA DIV
+    ===========
+*/
+
+.second-div{
+    width: 90vw;
+    height: 756px;
+    border: 1px solid #000;
+    padding: 0 50px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.bottom-second-div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    gap: 90px;
+    font-size: 32px;
+    align-items: center;
+}
+
+.section-second-div{
+    display: flex;
+    gap: 15px;
+}
+
+
+/* 
+    ============
+    TERCEIRA DIV
+    ============
+*/
+

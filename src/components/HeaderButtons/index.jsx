@@ -3,10 +3,10 @@ import './HeaderButtons.css'
 const HeaderButtons = () => {
     return (
         <div className="main-headerbuttons">
-            <button>
+            <button className='header-buttons'>
                 Login
             </button>
-            <button>
+            <button className='header-buttons'>
                 Se inscreva
             </button>
         </div>

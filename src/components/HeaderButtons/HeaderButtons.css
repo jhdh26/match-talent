@@ -1,4 +1,4 @@
-button{
+.header-buttons{
     width: 200px;
     height: 48px;
     border-style:solid;
@@ -6,6 +6,7 @@ button{
     background-color: #ED4D1B;
     text-transform: uppercase;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .main-headerbuttons{
