@@ -1,12 +1,25 @@
 import './HeaderButtons.css'
 
+import { Navigate, useNavigate } from 'react-router-dom' 
+
 const HeaderButtons = () => {
+
+const navigate = useNavigate()
+
+const clickLogin = () =>{
+    navigate('/login')
+}
+
+const clickRegister = () =>{
+    navigate('/register')
+}
+
     return (
         <div className="main-headerbuttons">
-            <button className='header-buttons'>
+            <button onClick={clickLogin} className='header-buttons'>
                 Login
             </button>
-            <button className='header-buttons'>
+            <button onClick={clickRegister} className='header-buttons'>
                 Se inscreva
             </button>
         </div>

@@ -1,7 +1,9 @@
 .skill-card{
     border: #000 3px solid;
+    box-shadow: 4px 4px 0 black;
     width: 272px;
     height: 306px;
+    position: relative;
 }
 
 .skill-card > h1 {
@@ -14,4 +16,11 @@
     max-width: 200px;
     padding-left: 35px;
     font-size: 16px;
+}
+
+.FaArrowRight{
+    font-size: 30px;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
 }

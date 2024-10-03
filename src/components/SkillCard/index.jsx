@@ -1,6 +1,6 @@
 import './SkillCard.css'
 
-import { IoIosExit } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 
 const SkillCard = (props) => {
     return(
@@ -12,7 +12,7 @@ const SkillCard = (props) => {
                 {props.icon}
                 <h1>{props.title}</h1>
                 <p>{props.text}</p>
-                <IoIosExit/>
+                <FaArrowRight className='FaArrowRight'/>
             </div>
         </div>
     )
