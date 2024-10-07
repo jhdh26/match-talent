@@ -13,3 +13,21 @@
     font-size: 40px;
     letter-spacing: -1px;
 }
+
+.header-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.header-buttons{
+    width: 200px;
+    height: 48px;
+    border-style:solid;
+    border-color: #000000;
+    background-color: #ED4D1B;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 black;
+    font-size: 20px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,15 @@
+.main-formlogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 70px;
+    border: 4px black solid;
+    margin: 8% 25%;
+    box-shadow: 4px 4px 0 black; 
+}
+
+.main-formlogin > h1{
+    font-size: 64px;
+}

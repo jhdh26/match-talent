@@ -1,0 +1,11 @@
+.main-forminput>h1 {
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.main-forminput>input {
+    width: 37vw;
+    height: 3rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}
