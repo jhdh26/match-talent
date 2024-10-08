@@ -4,7 +4,7 @@ const FormInput = (props) =>{
     return(
         <div className="main-forminput">
             <h1>{props.text}</h1>
-            <input type={props.type} placeholder={props.placeholder} />
+            <input type={props.type} onChange={props.onChange} placeholder={props.placeholder} />
         </div>
     )
 }

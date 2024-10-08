@@ -4,6 +4,7 @@ import img2 from '../../assets/img2.png'
 import Button from '../../components/Button'
 import SkillCard from '../../components/SkillCard'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -27,9 +28,9 @@ const Home = () => {
         <div className="home">
             <Header
                 onClick1={clickLogin}
-                text1='Login'
+                textbtn1='Login'
                 onClick2={clickRegister}
-                text2='Se inscreva'
+                textbtn2='Se inscreva'
             />
             <div className="main-homepage">
                 <div className="first-div">
@@ -105,6 +106,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

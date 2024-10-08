@@ -6,14 +6,20 @@ const Header = (props) => {
     return (
         <div className="main-header">
             <h1>Match Talent</h1>
+            <div className='header-text'>
+                <h1 className={props.className1}>{props.text1}</h1>
+                <h1 className={props.className2}>{props.text2}</h1>
+                <h1 className={props.className3}>{props.text3}</h1>
+                <h1 className={props.className4}>{props.text4}</h1>
+            </div>
             <div className="header-btn">
-            {props.text1 && (
+                {props.textbtn1 && (
                     <button onClick={props.onClick1} className='header-buttons'>
-                        {props.text1}
+                        {props.textbtn1}
                     </button>
                 )}
                 <button onClick={props.onClick2} className='header-buttons'>
-                    {props.text2}
+                    {props.textbtn2}
                 </button>
             </div>
         </div>

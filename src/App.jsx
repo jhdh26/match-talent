@@ -2,7 +2,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import Footer from './components/Footer'
+import Match from './pages/Match'
+
 
 
 
@@ -14,9 +15,9 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='register' element={null}/>
+          <Route path='match' element={<Match/>}/>
         </Routes>
       </BrowserRouter>
-      <Footer />
     </div>
   )
 }
