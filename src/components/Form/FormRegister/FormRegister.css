@@ -1,0 +1,38 @@
+.main-formregister {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 90vw;
+    height: 100vh; 
+    padding: 0 3.125rem;
+    margin: 0px auto;
+    border: 1px black solid;
+}
+
+.formregister {
+    position: relative;
+    width: 40vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 30px;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}
+
+.input-register-100{
+    width: 34vw;
+    height: 2.3rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}
+
+.input-register-50{
+    width: 15vw;
+    height: 2.3rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}

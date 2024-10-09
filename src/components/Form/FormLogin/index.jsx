@@ -3,10 +3,29 @@ import FormInput from '../FormInput'
 import Button from '../../Button'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import Modal from 'react-modal'
 
 const FormLogin = () => {
 
     const navigate = useNavigate()
+
+    const clickPerson = () =>{
+        navigate('/registerperson')
+    }
+
+    const clickCompany = () =>{
+        navigate('/registercompany')
+    }
+
+    const [popup, setPopup] = useState(false)
+
+    function openModal() {
+        setPopup(true)
+    }
+
+    function closeModal() {
+        setPopup(false)
+    }
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -42,7 +61,7 @@ const FormLogin = () => {
         }
     }
 
-    const toRegister = () =>{
+    const toRegister = () => {
         navigate('/register')
     }
 
@@ -56,6 +75,7 @@ const FormLogin = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder=''
+                className='input-login-100'
             />
             <FormInput
                 text='Senha:'
@@ -63,10 +83,25 @@ const FormLogin = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder=''
+                className='input-login-100'
             />
-            <div style={{textAlign:'center'}}className="to-register">
-                <h1 style={{fontSize:'20px'}}>Não tem conta?</h1>
-                <h1 onClick={toRegister} style={{color:'#ED4D1B', cursor:'pointer'}}>Registre-se aqui</h1>
+            <div style={{ textAlign: 'center' }} className="to-register">
+                <Modal
+                    isOpen={popup}
+                    onRequestClose={closeModal}
+                    contentLabel='register'
+                    className='modal-register'
+                    overlayClassName='overlay-register'
+                >
+                    <div className="modal-register-content">
+                        <h1>Registar</h1>
+                        <h2>Selecione o tipo de conta que quer se registrar</h2>
+                        <button className='modal-btn-register' onClick={clickPerson}>Conta Pessoal</button>
+                        <button className='modal-btn-cancel' onClick={clickCompany}>Conta Juridica</button>
+                    </div>
+                </Modal>
+                <h1 style={{ fontSize: '20px' }}>Não tem conta?</h1>
+                <h1 onClick={openModal} style={{ color: '#ED4D1B', cursor: 'pointer' }}>Registre-se aqui</h1>
             </div>
             <Button
                 name='logar'

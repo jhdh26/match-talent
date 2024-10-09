@@ -14,3 +14,10 @@
 .main-formlogin > h1{
     font-size: 64px;
 }
+
+.input-login-100{
+    width: 37vw;
+    height: 3rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}

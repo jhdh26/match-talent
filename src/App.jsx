@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Match from './pages/Match'
+import RegisterPerson from './pages/Register/RegisterPerson'
+import RegisterCompany from './pages/Register/RegisterCompany'
+import ScrollTop from './utils/ScrollTop'
 
 
 
@@ -10,11 +13,13 @@ import Match from './pages/Match'
 function App() {
   return (
     <div className="main">
-      <BrowserRouter>
+      <BrowserRouter> 
+        <ScrollTop/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='login' element={<Login/>}/>
-          <Route path='register' element={null}/>
+          <Route path='registerperson' element={<RegisterPerson/>}/>
+          <Route path='registercompany'  element={<RegisterCompany/>}/>
           <Route path='match' element={<Match/>}/>
         </Routes>
       </BrowserRouter>

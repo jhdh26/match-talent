@@ -1,12 +1,17 @@
 import './Home.css'
+import './ModalRegister.css'
+
 import img1 from '../../assets/img1.png'
 import img2 from '../../assets/img2.png'
+
 import Button from '../../components/Button'
 import SkillCard from '../../components/SkillCard'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { useNavigate } from 'react-router-dom'
 
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Modal from 'react-modal'
 
 import { IoMdPeople } from "react-icons/io";
 import { AiFillCodepenSquare } from "react-icons/ai";
@@ -21,17 +26,46 @@ const Home = () => {
         navigate('/login')
     }
 
-    const clickRegister = () => {
-        navigate('/register')
+    const clickPerson = () =>{
+        navigate('/registerperson')
     }
+
+    const clickCompany = () =>{
+        navigate('/registercompany')
+    }
+
+    const [popup, setPopup] = useState(false)
+
+    function openModal() {
+        setPopup(true)
+    }
+
+    function closeModal() {
+        setPopup(false)
+    }
+
     return (
         <div className="home">
             <Header
                 onClick1={clickLogin}
                 textbtn1='Login'
-                onClick2={clickRegister}
+                onClick2={openModal}
                 textbtn2='Se inscreva'
             />
+            <Modal
+                isOpen={popup}
+                onRequestClose={closeModal}
+                contentLabel='register'
+                className='modal-register'
+                overlayClassName='overlay-register'
+            >
+                <div className="modal-register-content">
+                    <h1>Registar</h1>
+                    <h2>Selecione o tipo de conta que quer se registrar</h2>
+                    <button className='modal-btn-register' onClick={clickPerson}>Conta Pessoal</button>
+                    <button className='modal-btn-cancel' onClick={clickCompany}>Conta Juridica</button>
+                </div>
+            </Modal>
             <div className="main-homepage">
                 <div className="first-div">
                     <div className="left-first-div">
@@ -48,6 +82,7 @@ const Home = () => {
                         <p>Na Match Talent, acreditamos que cada talento é único e tem o poder de transformar o mercado de trabalho. Reforçamos o compromisso de valorizar as habilidades de cada indivíduo, promovendo inclusão e oportunidades iguais para todos.</p>
                         <Button
                             name='Registrar'
+                            onClick={openModal}
                         />
                     </div>
                     <div className="right-first-div">
@@ -101,12 +136,12 @@ const Home = () => {
                         <h1 style={{ fontSize: '64px' }}>Sobre</h1>
                         <p style={{ fontSize: '24px', color: '#000000' }}>A Match Talent é uma startup de tecnologia social que utiliza inteligência artificial para promover inclusão no mercado de trabalho. Focada em conectar candidatos vulneráveis a oportunidades de emprego, a Match Talent desenvolve uma plataforma que alinha habilidades e experiências de candidatos com as exigências das vagas, garantindo acessibilidade e eficiência no processo de contratação.</p>
                         <Button
-                            name='Mais Sobre'
+                            name='veja mais'
                         />
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
