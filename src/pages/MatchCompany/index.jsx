@@ -1,4 +1,4 @@
-import './Match.css'
+import './MatchCompany.css'
 
 import Header from '../../components/Header'
 import Button from '../../components/Button'
@@ -6,7 +6,7 @@ import Footer from '../../components/Footer'
 
 import { useNavigate } from 'react-router-dom'
 
-const Match = () => {
+const MatchCompany = () => {
 
     const navigate = useNavigate()
 
@@ -14,7 +14,11 @@ const Match = () => {
         navigate('/')
     }
 
+    const goProfile = () =>{
+        navigate('/profilecompany')
+    }
     const nomes = ['João','Pedro','Victor','Vinicius']
+    const skills = ['HTML', 'CSS', 'JavaScript', 'PHP']
 
     return (
         <div className="match">
@@ -26,6 +30,7 @@ const Match = () => {
                 text2='Match'
                 text3='Eventos'
                 text4='Perfil'
+                onClickText4={goProfile}
             />
             <div className="main-match">
                 <div className="left-match">
@@ -43,7 +48,7 @@ const Match = () => {
                         <input className='search-skills-input' type="text" placeholder='Procurar skills' />
                         <h1>Skills selecionadas:</h1>
                         <div className="match-skills">
-                            {['HTML', 'CSS', 'JavaScript', 'PHP'].map(skill => (
+                            {skills .map(skill => (
                                 <h3 key={skill}>{skill}</h3>
                             ))}
                         </div>
@@ -63,4 +68,4 @@ const Match = () => {
     )
 }
 
-export default Match
+export default MatchCompany

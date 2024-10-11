@@ -55,16 +55,11 @@ const FormLogin = () => {
         const passwordValid = validatePassword()
 
         if (emailValid && passwordValid) {
-            navigate('/match')
+            navigate('/matchcompany')
         } else {
             return alert('Email ou senha incorreto')
         }
     }
-
-    const toRegister = () => {
-        navigate('/register')
-    }
-
 
     return (
         <div className="main-formlogin">

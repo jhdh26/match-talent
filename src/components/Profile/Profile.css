@@ -1,0 +1,104 @@
+/* INPUT */
+.input-profile-40{
+    width: 40vw;
+    height: 2rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}
+
+.input-profile-70{
+    width: 70vw;
+    height: 2.3rem;
+    border: 2px black solid;
+    box-shadow: 4px 4px 0 black;
+}
+/* ----- */
+
+.main-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-form{
+    width: 85vw;
+    height: 150vh;
+    border: 3px black solid;
+    box-shadow: 4px 4px 0 black; 
+    display: flex;
+    padding-top: 4vw;
+    justify-content: center;
+}
+
+.form-profile{
+    width: 70vw;
+    height: 80vh;
+}
+
+.top-profile-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img1-profile{
+    width: 220px;
+    height: 220px;
+    border: 1px black solid;
+}
+
+.first-div-profileform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.second-div-profileform{
+    padding-top: 50px;
+}
+
+.thirty-div-profileform{
+    padding-top: 50px;
+    text-align: left;
+}
+
+.thirty-div-profileform > h1{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 4px;
+}
+
+.profile-textarea{
+    width: 70.4vw;
+    height: 15vh;
+    border: 2px #000 solid;
+    box-shadow: 4px 4px 0 #000;
+    box-sizing: border-box;
+    padding: 15px; 
+    resize: none; 
+    line-height: 1.2; 
+}
+
+.div-profile-list{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-and-button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-mddelete{
+    cursor: pointer;
+    font-size: 20px;
+}
+
